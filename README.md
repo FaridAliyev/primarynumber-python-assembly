@@ -12,17 +12,17 @@ This Python script generates prime numbers within a specified range using the Si
 ### Usage
 1. Make sure you have Python installed on your system.
 2. Open a terminal or command prompt.
-3. Navigate to the directory containing PrimeNumbers.py.
+3. Navigate to the directory containing `PrimeNumbers.py`.
 4. Run the script by executing the following command:
-   bash
+   ```bash
    python PrimeNumbers.py
-   
+   ```
 5. Follow the on-screen instructions to input the range for prime number generation.
 
 ### Example
-bash
+```bash
 python PrimeNumbers.py
-
+```
 
 ## PrimeNumbers.asm
 
@@ -48,16 +48,18 @@ To assemble and link the assembly code on a Windows system, follow these steps:
    ```
 
 ### Example
-bash
+```bash
 nasm -f win32 PrimeNumbers.asm -o PrimeNumbers.obj
+```
+```bash
 golink /entry:start PrimeNumbers.obj user32.dll kernel32.dll
-
+```
 
 ### Running the Executable
 After successful assembling and linking, run the generated executable:
-bash
+```bash
 PrimeNumbers.exe
-
+```
 ### Note
 Ensure the correct paths are set for NASM and GoLink in your system's PATH variable.
 
