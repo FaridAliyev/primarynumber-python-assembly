@@ -42,8 +42,10 @@ To assemble and link the assembly code on a Windows system, follow these steps:
 3. Run the following commands:
    ```bash
    nasm -f win32 PrimeNumbers.asm -o PrimeNumbers.obj
+   ```
+   ```bash
    golink /entry:start PrimeNumbers.obj user32.dll kernel32.dll
-   
+   ```
 
 ### Example
 bash
