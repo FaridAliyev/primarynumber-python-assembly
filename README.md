@@ -1,68 +1,62 @@
-# primarynumber-python-assembly
+# PrimeNumbers Python & Assembly README
 
-This repository is used to compare the Python and assembly code performance together.
-It is a Computer Systems Architecture course project. 
+## PrimeNumbers.py
 
+### Project Creators
+- Huru Algayeva
+- Farid Aliyev
 
+### Description
+This Python script generates prime numbers within a specified range using the Sieve of Eratosthenes algorithm.
 
-# Project Title: 
-## Comparative Analysis of Prime Number Generation in Python and Assembly
+### Usage
+1. Make sure you have Python installed on your system.
+2. Open a terminal or command prompt.
+3. Navigate to the directory containing PrimeNumbers.py.
+4. Run the script by executing the following command:
+   bash
+   python PrimeNumbers.py
+   
+5. Follow the on-screen instructions to input the range for prime number generation.
 
-
-
-# Abstract:
-
-This research project aims to compare the performance and implementation complexity of prime number generation algorithms in Python and Assembly programming languages. The study focuses on assessing the execution time, memory usage, and code flexibility associated with prime number generation in both languages within the range of 1 to 99999.
-
-
-
-# Objectives:
-
-Implement a prime number generation algorithm (e.g., Sieve of Eratosthenes) in both Python and Assembly languages.
-Measure and compare the execution time and memory usage of the implemented algorithms.
-Analyze the code flexibility, readability, and adaptability to variations in the prime number generation task for both languages.
-Present the findings in a comprehensive report to contribute insights into the trade-offs between performance and flexibility in Python and Assembly programming.
-
-
+### Example
+bash
+python PrimeNumbers.py
 
 
-# Methodology:
+## PrimeNumbers.asm
 
-1- Algorithm Selection:
+### Description
+This assembly program finds prime numbers using a simple algorithm.
 
-Choose a prime number generation algorithm suitable for implementation in both Python and Assembly.
-2- Implementation:
+### Prerequisites
+1. NASM assembler: Make sure NASM is installed on your system. You can download it [here](https://www.nasm.us/).
 
-Implement the selected algorithm in Python, adhering to best practices and code readability.
-Write an equivalent implementation in the Assembly language, considering the specifics of the chosen Assembly language.
-3- Performance Measurement:
+2. GoLink linker: Download GoLink from [here](https://www.godevtool.com/). Ensure it's available in your system's PATH.
 
-Utilize appropriate timing techniques to measure the execution time of both Python and Assembly implementations.
-Monitor memory usage during the execution of the algorithms.
-4- Code Flexibility Analysis:
+### Assembling and Linking
+To assemble and link the assembly code on a Windows system, follow these steps:
 
-Analyze the code flexibility, readability, and adaptability of both implementations.
-Experiment with modifying the code to handle variations of the prime number generation task and assess ease of adaptation.
-5- Documentation and Reporting:
+1. Open a command prompt.
+2. Navigate to the directory containing PrimeNumbers.asm.
+3. Run the following commands:
+   bash
+   nasm -f win32 PrimeNumbers.asm -o PrimeNumbers.obj
+   golink /entry:start PrimeNumbers.obj user32.dll kernel32.dll
+   
 
-Document the implementations, algorithms used and any relevant considerations.
-Prepare a comprehensive report summarizing performance metrics, code flexibility analysis, and insights gained.
-6- Visualization:
-
-Create visual representations (e.g., graphs, charts) to illustrate the performance differences between Python and Assembly.
-7- Conclusion and Implications:
-
-Conclude the research project by summarizing key findings.
-Discuss implications for programming language choice in computational tasks, considering the trade-offs identified.
+### Example
+bash
+nasm -f win32 PrimeNumbers.asm -o PrimeNumbers.obj
+golink /entry:start PrimeNumbers.obj user32.dll kernel32.dll
 
 
+### Running the Executable
+After successful assembling and linking, run the generated executable:
+bash
+PrimeNumbers.exe
 
+### Note
+Ensure the correct paths are set for NASM and GoLink in your system's PATH variable.
 
-# What You Must Deliver:
-
-Python implementation code.
-Assembly implementation code (specific to chosen Assembly language).
-Performance metrics include execution time and memory usage.
-Comprehensive report detailing methodology, results, and analysis. (only between 2 -5 pages)
-Visual representations of performance differences. (Comparison Graph)
-Presentation slides for sharing findings (only 5 slides)
+Feel free to reach out if you encounter any issues or have questions!
