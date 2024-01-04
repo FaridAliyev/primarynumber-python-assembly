@@ -1,4 +1,4 @@
-# PrimeNumbers Python & Assembly README
+# PrimeNumbers Python & Assembly
 
 ## PrimeNumbers.py
 
